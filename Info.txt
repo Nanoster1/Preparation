@@ -1,0 +1,13 @@
+Id;LastName;FirstName;BirthDate
+1;Ivanov;Ivan;01.01.1990
+2;Ivanova;Mariya;01.05.1998
+3;Ivanov;Petr;01.01.1980
+4;Ivanova;Olga;01.01.1971
+5;Petrova;Margarita;01.01.1972
+6;Ivanov;Oleg;02.03.1995
+
+3<->4=spouse
+3<->1=parent
+4<->1=parent
+5<->3=sibling
+6<->4=sibling

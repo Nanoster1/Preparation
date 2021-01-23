@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30413.136
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Родственники", "Родственники.csproj", "{3370AE07-2A52-4763-BC1E-C81767A2FF1B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Субтитры", "..\Субтитры\Субтитры.csproj", "{F2524FBA-C966-4487-A359-5C02DA07A10E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3370AE07-2A52-4763-BC1E-C81767A2FF1B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3370AE07-2A52-4763-BC1E-C81767A2FF1B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3370AE07-2A52-4763-BC1E-C81767A2FF1B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3370AE07-2A52-4763-BC1E-C81767A2FF1B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F2524FBA-C966-4487-A359-5C02DA07A10E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F2524FBA-C966-4487-A359-5C02DA07A10E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F2524FBA-C966-4487-A359-5C02DA07A10E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F2524FBA-C966-4487-A359-5C02DA07A10E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5A8D40B5-73C8-4683-9350-A34828576421}
+	EndGlobalSection
+EndGlobal
