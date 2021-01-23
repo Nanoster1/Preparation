@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30413.136
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Родственники", "Родственники.csproj", "{3370AE07-2A52-4763-BC1E-C81767A2FF1B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Родственники", "Родственники.csproj", "{3370AE07-2A52-4763-BC1E-C81767A2FF1B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Субтитры", "..\Субтитры\Субтитры.csproj", "{F2524FBA-C966-4487-A359-5C02DA07A10E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Субтитры", "..\Субтитры\Субтитры.csproj", "{F2524FBA-C966-4487-A359-5C02DA07A10E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Интерпретатор", "..\Интерпретатор\Интерпретатор.csproj", "{90ABEB6B-E4B2-42DB-B060-37B4FC9C99FB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{F2524FBA-C966-4487-A359-5C02DA07A10E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F2524FBA-C966-4487-A359-5C02DA07A10E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F2524FBA-C966-4487-A359-5C02DA07A10E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{90ABEB6B-E4B2-42DB-B060-37B4FC9C99FB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{90ABEB6B-E4B2-42DB-B060-37B4FC9C99FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{90ABEB6B-E4B2-42DB-B060-37B4FC9C99FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{90ABEB6B-E4B2-42DB-B060-37B4FC9C99FB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

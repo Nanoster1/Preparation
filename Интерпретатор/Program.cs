@@ -24,9 +24,19 @@ namespace Интерпретатор
                 if (file[i].Contains("mov"))
                 {
                     if (double.TryParse(stroke[2], out double c))
-                        nums.Add(stroke[1], stroke[2]);
+                    {
+                        if (nums.ContainsKey(stroke[1]))
+                            nums[stroke[1]] = stroke[2];
+                        else
+                            nums.Add(stroke[1], stroke[2]);
+                    }
                     else
-                        nums.Add(stroke[1], nums[stroke[2]]);
+                    {
+                        if (nums.ContainsKey(stroke[1]))
+                            nums[stroke[1]] = nums[stroke[2]];
+                        else
+                            nums.Add(stroke[1], nums[stroke[2]]);
+                    }                 
                 }
                 else if (file[i].Contains("add"))
                 {
