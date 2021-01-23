@@ -1,0 +1,6 @@
+var a
+var b
+mov a, 5 
+mov b, a
+add a, 10 
+add b, 2,5
