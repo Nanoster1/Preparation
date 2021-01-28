@@ -13,8 +13,8 @@ namespace Командная_строка
             while (true)
             {
                 string text = Console.ReadLine();
-                Commands.Command = text;
-                Commands.RunCommand(Catalogue.catalog);
+                Commands.EnterCommand(text);
+                Commands.RunCommand();
             }
         }
     }
@@ -56,50 +56,53 @@ namespace Командная_строка
     }
     static class Commands
     {
-        static public string Command { get; set; }
+        static public string Command { get; private set; }
         static public void EnterCommand(string command)
         {
             Command = command;
         }
-        static public void RunCommand(Catalog catalog)
+        static public void RunCommand()
         {
             if (Command.Contains("cd"))
             {
-                Catalogue.catalog = RunCd(catalog, Command);
-                Drower.ShowFiles(catalog);
-                Drower.ShowFolders(catalog);
+                Catalogue.catalog = RunCd(Command);
+                Drower.ShowFiles(Catalogue.catalog);
+                Drower.ShowFolders(Catalogue.catalog);
             }
             else if (Command.Contains("new"))
             {
                 string file = Command.Split(" ")[1];
-                CreateFile(catalog, file);
+                CreateFile(Catalogue.catalog, file);
             }
             else
             {
                 string file = Command.Split(" ")[1];
-                DeleteFile(catalog, file);
+                DeleteFile(Catalogue.catalog, file);
             }
         }
-        private static Catalog RunCd(Catalog catalog, string text)
+        private static Catalog RunCd(string text)
         {
             if (Command.Contains("."))
             {
-                catalog = new Catalog(catalog.Directory.Parent.ToString());
+                string[] strings = Catalogue.catalog.Directory.ToString().Split("\\");
+                string path = Catalogue.catalog.Directory.ToString().Replace("\\" + strings[strings.Length - 1], "");
+                Catalog catalog = new Catalog(path);
                 return catalog;
             }
             else
             {
-                string[] oldStrings = catalog.Path.Split(" ");
+                string[] oldStrings = Catalogue.catalog.Path.Split(" ");
                 string oldFolder = oldStrings[1];                     
                 string[] newStrings = text.Split(" ");
                 string newFolder = newStrings[1];
-                catalog = new Catalog(catalog.Path.Replace(oldFolder, newFolder));
+                Catalog catalog = new Catalog(Catalogue.catalog.Path.Replace(oldFolder, newFolder));
                 return catalog;
             }
         }
         private static void CreateFile(Catalog catalog, string file)
         {
-            File.Create(catalog.Path + "\\" + file);
+            var myFile = File.Create(catalog.Path + "\\" + file);
+            myFile.Close();
         }
         private static void DeleteFile(Catalog catalog, string file)
         {
